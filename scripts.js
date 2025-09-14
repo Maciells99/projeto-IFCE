@@ -1,10 +1,14 @@
-const h1 = document.querySelector('.h1')
+const img = document.querySelector('#img')
+
+let lsImg = ["/img/vermelho.png", "/img/amarelo.png", "/img/verde.png", "/img/amarelo.png",]
+let cont = 0
 
 setInterval(()=>{{
-    h1.textContent = 'Meu Brasil é do Lula!'
-}}, 1000)
+    img.src = lsImg[cont]
+    cont++
 
+    if (cont > 3) {
+        cont = 0
+    }
 
-setInterval(()=>{{
-    h1.textContent = 'Meu Brasil é corinthiano!'
-}}, 2000)
+}}, 3000)
